@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+
+
+.container{
+    width: 100%;
+    height: 100vh;
+  background: rgb(5, 73, 125);
+}
+        .box{
+
+          
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+    /* border: 1px solid black; */
+            cursor: pointer;
+           
+        }
+        button:hover{
+            color: white;
+            background: #000;
+        }
+button{
+    width: 200px;
+    padding: 10px;
+    border-radius: 20px;
+    
+}
+button:active{
+    transform: translateY(4px);
+    box-shadow: 0 5px #666;
+}
+
+
+    </style>
+</head>
+<body>
+    
+
+<div class="container">
+
+
+    <div class="box">
+        <button id="hd" onclick="cal()">Click me</button>
+    </div>
+</div>
+    <script>
+
+
+
+function cal(){
+
+    var username = prompt("Enter username");
+    var password = prompt("Enter password");
+
+var heading = document.getElementById("hd").value;
+
+    if(username != "" && password != ""){
+if(username == "admin" && password == "admin123"){
+document.getElementById("hd").innerHTML = heading+" Login Successfully!!";
+window.location.href = "https://youtu.be/AOGAIZ4mQnI";
+}
+else{
+    document.getElementById("hd").innerHTML = heading+"<span style='color:red;'> Login Fail!!<span>";
+}
+    }
+
+    else{
+        document.getElementById("hd").innerHTML = heading+" Plz enter correct value"
+    }
+
+
+}
+    </script>
+</body>
+</html>
